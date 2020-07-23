@@ -17,7 +17,7 @@ services:
       - /proc/:/host/proc/:ro
       - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
     labels:
-      com.datadoghq.ad.logs: '[{"source": "datadog-agent", "service": "agent"}]'
+      com.datadoghq.ad.logs: '[{"source": "agent", "service": "agent"}]'
   discounts:
     environment:
       - FLASK_APP=discounts.py
@@ -47,7 +47,7 @@ services:
       - DB_PASSWORD
       - DD_CLIENT_TOKEN
       - DD_APPLICATION_ID
-    image: "ddtraining/ecommerce-frontend:latest"
+    #image: "ddtraining/ecommerce-frontend:latest"
     command: sh docker-entrypoint.sh
     ports:
       - "3000:3000"
