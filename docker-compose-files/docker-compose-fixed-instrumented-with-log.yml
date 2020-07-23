@@ -47,7 +47,7 @@ services:
       - DB_PASSWORD
       - DD_CLIENT_TOKEN
       - DD_APPLICATION_ID
-    build: .
+    build: ../frontend
     #image: "ddtraining/ecommerce-frontend:latest"
     command: sh docker-entrypoint.sh
     ports:
